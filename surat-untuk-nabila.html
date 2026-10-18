@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Untuk Nabila Sayangkuh Cintabgh Manjabgh 🤍</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Quicksand:wght@400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --blush: #fff0f4;
+      --petal: #ffd3e0;
+      --rose: #f48fb1;
+      --deep: #c2185b;
+      --wine: #7b2346;
+      --ink: #4a2535;
+      --paper: #fffafb;
+      --script: 'Great Vibes', 'Snell Roundhand', cursive;
+      --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      --sans: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: var(--serif);
+      color: var(--ink);
+      background: linear-gradient(180deg, #ffe4ec 0%, #fff0f4 35%, #ffdbe7 100%);
+      background-attachment: fixed;
+      overflow-x: hidden;
+    }
+
+    body.locked {
+      overflow: hidden
+    }
+
+    /* ===== Kelopak jatuh ===== */
+    #petals {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      overflow: hidden
+    }
+
+    .petal {
+      position: absolute;
+      top: -30px;
+      width: 14px;
+      height: 18px;
+      background: radial-gradient(circle at 30% 30%, #ffc1d5, #f06292);
+      border-radius: 80% 0 80% 0;
+      opacity: .75;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translate3d(0, -30px, 0) rotate(0deg)
+      }
+
+      100% {
+        transform: translate3d(var(--drift), 110vh, 0) rotate(540deg)
+      }
+    }
+
+    /* ===== Layar pembuka ===== */
+    #cover {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      background: radial-gradient(circle at 50% 40%, #ffe9f0, #f8bbd0 70%, #f48fb1);
+      text-align: center;
+      padding: 24px;
+      transition: opacity 1.2s ease, visibility 1.2s ease;
+    }
+
+    #cover.gone {
+      opacity: 0;
+      visibility: hidden
+    }
+
+    #cover .hint {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.25rem;
+      color: var(--wine)
+    }
+
+    #cover .to {
+      font-family: var(--script);
+      font-size: clamp(2.6rem, 9vw, 4.2rem);
+      color: var(--deep)
+    }
+
+    .seal {
+      width: 112px;
+      height: 112px;
+      border: none;
+      cursor: pointer;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #ef5b8c, #b0124f 70%);
+      box-shadow: 0 10px 30px rgba(176, 18, 79, .45), inset 0 -6px 12px rgba(0, 0, 0, .18);
+      color: #ffe3ec;
+      font-size: 3rem;
+      line-height: 1;
+      animation: beat 1.6s ease-in-out infinite;
+    }
+
+    .seal:focus-visible,
+    .music:focus-visible,
+    .nav:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: 4px
+    }
+
+    @keyframes beat {
+
+      0%,
+      100% {
+        transform: scale(1)
+      }
+
+      15% {
+        transform: scale(1.12)
+      }
+
+      30% {
+        transform: scale(1)
+      }
+
+      45% {
+        transform: scale(1.08)
+      }
+    }
+
+    /* ===== Hero ===== */
+    main {
+      position: relative;
+      z-index: 2
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 24px;
+      margin-top: -100px;
+    }
+
+    .hero h1 {
+      font-family: var(--script);
+      font-weight: 400;
+      font-size: clamp(3.6rem, 15vw, 8rem);
+      line-height: 1.05;
+      color: var(--deep);
+      text-shadow: 0 4px 24px rgba(244, 143, 177, .55);
+      margin-bottom: 180px;
+    }
+
+    .hero p {
+      margin-top: -44px;
+      font-style: italic;
+      font-size: clamp(1.15rem, 3.6vw, 1.55rem);
+      color: var(--wine);
+      max-width: 30ch;
+    }
+
+    .hero .dates {
+      margin-top: 30px;
+      font-family: var(--sans);
+      font-size: .95rem;
+      letter-spacing: .04em;
+      color: var(--rose)
+    }
+
+    .scroll {
+      margin-top: -200px;
+      font-size: 1.8rem;
+      color: var(--rose);
+      animation: bob 2s ease-in-out infinite
+    }
+
+    @keyframes bob {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(10px)
+      }
+    }
+
+    /* ===== Surat ===== */
+    .letter-wrap {
+      padding: 30px 20px 80px;
+      display: flex;
+      justify-content: center
+    }
+
+    .letter {
+      width: 100%;
+      max-width: 720px;
+      background: var(--paper);
+      padding: clamp(28px, 6vw, 64px) clamp(22px, 6vw, 64px);
+      border-radius: 6px;
+      position: relative;
+      box-shadow: 0 20px 50px rgba(194, 24, 91, .18), 0 2px 0 #f8bbd0;
+      background-image: repeating-linear-gradient(transparent 0 33px, rgba(244, 143, 177, .22) 33px 34px);
+    }
+
+    .letter::before {
+      content: "";
+      position: absolute;
+      left: clamp(14px, 3vw, 34px);
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: rgba(240, 98, 146, .35);
+    }
+
+    .letter h2 {
+      font-family: var(--script);
+      font-weight: 400;
+      font-size: clamp(2.4rem, 8vw, 3.6rem);
+      color: var(--deep);
+      margin-bottom: 18px;
+    }
+
+    .letter p {
+      font-size: clamp(1.15rem, 3.4vw, 1.32rem);
+      line-height: 34px;
+      margin-bottom: 34px;
+      max-width: 62ch;
+      margin-top: 10px;
+    }
+
+    .letter blockquote {
+      margin: 6px 0 34px;
+      padding: 6px 0 6px 18px;
+      border-left: 3px solid var(--rose);
+      font-style: italic;
+      font-size: clamp(1.2rem, 3.6vw, 1.4rem);
+      line-height: 34px;
+      color: var(--wine);
+    }
+
+    .letter .sign {
+      font-family: var(--script);
+      font-size: clamp(2rem, 6vw, 2.8rem);
+      color: var(--deep);
+      text-align: right;
+      margin: 10px 0 0;
+      line-height: 1.2;
+    }
+
+    .letter .ask {
+      font-weight: 600;
+      color: var(--wine)
+    }
+
+    /* ===== Galeri ===== */
+    .gallery {
+      padding: 30px 0 90px;
+      text-align: center
+    }
+
+    .gallery h2 {
+      font-family: var(--script);
+      font-weight: 400;
+      font-size: clamp(2.6rem, 9vw, 4rem);
+      color: var(--deep)
+    }
+
+    .gallery .sub {
+      font-style: italic;
+      color: var(--wine);
+      margin: 6px 20px 34px;
+      font-size: 1.2rem
+    }
+
+    .rail {
+      display: flex;
+      gap: 26px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding: 20px max(24px, calc(50vw - 150px)) 40px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--rose) transparent;
+    }
+
+    .polaroid {
+      flex: 0 0 auto;
+      width: 300px;
+      scroll-snap-align: center;
+      background: #fff;
+      padding: 14px 14px 18px;
+      border-radius: 4px;
+      cursor: zoom-in;
+      border: none;
+      text-align: center;
+      box-shadow: 0 14px 34px rgba(194, 24, 91, .22);
+      transition: transform .35s ease;
+    }
+
+    .polaroid:nth-child(odd) {
+      transform: rotate(-2.2deg)
+    }
+
+    .polaroid:nth-child(even) {
+      transform: rotate(2deg)
+    }
+
+    .polaroid:hover,
+    .polaroid:focus-visible {
+      transform: rotate(0) scale(1.03)
+    }
+
+    .polaroid .ph {
+      width: 100%;
+      aspect-ratio: 4/5;
+      border-radius: 2px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #ffd3e0, #f8a5c2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .polaroid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block
+    }
+
+    .polaroid .empty {
+      font-family: var(--sans);
+      color: #fff;
+      font-size: .95rem;
+      text-align: center;
+      padding: 12px
+    }
+
+    .polaroid .empty b {
+      display: block;
+      font-size: 2.4rem;
+      margin-bottom: 6px
+    }
+
+    .polaroid figcaption {
+      font-family: var(--script);
+      font-size: 1.7rem;
+      color: var(--deep);
+      margin-top: 12px;
+      line-height: 1.1
+    }
+
+    .nav-row {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 4px
+    }
+
+    .nav {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      background: var(--rose);
+      color: #fff;
+      font-size: 1.3rem;
+      box-shadow: 0 6px 16px rgba(240, 98, 146, .4);
+      transition: transform .2s;
+    }
+
+    .nav:hover {
+      transform: scale(1.08)
+    }
+
+    /* ===== Lightbox ===== */
+    #lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 70;
+      background: rgba(74, 37, 53, .82);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      cursor: zoom-out;
+    }
+
+    #lightbox.open {
+      display: flex
+    }
+
+    #lightbox .frame {
+      background: #fff;
+      padding: 14px 14px 20px;
+      border-radius: 4px;
+      max-width: min(92vw, 520px);
+      text-align: center
+    }
+
+    #lightbox img {
+      max-width: 100%;
+      max-height: 70vh;
+      display: block;
+      margin: 0 auto
+    }
+
+    #lightbox .cap {
+      font-family: var(--script);
+      font-size: 2rem;
+      color: var(--deep);
+      margin-top: 10px
+    }
+
+    /* ===== Penutup ===== */
+    .closing {
+      padding: 20px 24px 110px;
+      text-align: center
+    }
+
+    .closing .heart {
+      font-size: 3.4rem;
+      color: var(--deep);
+      animation: beat 1.8s ease-in-out infinite;
+      display: inline-block
+    }
+
+    .closing p {
+      font-style: italic;
+      font-size: clamp(1.2rem, 3.6vw, 1.5rem);
+      color: var(--wine);
+      max-width: 34ch;
+      margin: 14px auto 0
+    }
+
+    /* ===== Tombol musik ===== */
+    .music {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 60;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      background: var(--deep);
+      color: #fff;
+      font-size: 1.4rem;
+      box-shadow: 0 8px 22px rgba(194, 24, 91, .45);
+    }
+
+    .music.off {
+      background: #b9919f
+    }
+
+    .music.spin span {
+      display: inline-block;
+      animation: spin 4s linear infinite
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    /* ===== Muncul saat digulir ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 1s ease, transform 1s ease
+    }
+
+    .reveal.in {
+      opacity: 1;
+      transform: none
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      * {
+        animation: none !important;
+        transition: none !important
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none
+      }
+
+      html {
+        scroll-behavior: auto
+      }
+    }
+  </style>
+</head>
+
+<body class="locked">
+
+  <div id="petals" aria-hidden="true"></div>
+
+  <!-- Layar pembuka: ketukan ini yang memulai musik (aturan browser) -->
+  <section id="cover">
+    <div class="to">Untuk Nabila Sayangkuh Cintabgh Manjabgh</div>
+    <button class="seal" id="openBtn" aria-label="Buka surat">♥</button>
+    <div class="hint">Ketuk hati ini untuk membuka suratnya</div>
+  </section>
+
+  <main>
+    <header class="hero">
+      <h1>Dear Diary,</h1>
+      <p>tentang seseorang yang belum selesai kusayangi</p>
+      <div class="dates">20 Juli 2022 &nbsp;♡&nbsp; 19 Oktober 2026</div>
+      <div class="scroll" aria-hidden="true">⌄</div>
+    </header>
+
+    <section class="letter-wrap">
+      <article class="letter reveal">
+        <h2>Untuk Abel, Orang Favorite</h2>
+
+        <p>Hari ini abg mau jujur, tanpa gengsi dan tanpa topeng.</p>
+
+        <p>Dulu abg menulis bahwa abel layak pergi dan bahwa abg senang atas keberanian abel. Itu bukan perasaan abg
+          yang
+          sebenarnya. Itu cuma luka yang abg bungkus dengan kata-kata yang terdengar kuat. Yang sebenarnya, abg
+          kehilangan abel, dan sejak kita jadi asing, batin abg tersiksa. abg tidak tahu harus cerita ke siapa selain ke
+          diary ini.</p>
+
+        <p>Selama 4 tahun ini, abel ada di hari-hari tersulit abg, mungkin begitu juga dengan abel. Saat beban abg berat
+          dan
+          tanggung jawab abg datang bertubi-tubi, abg terlalu sibuk bertahan sampai lupa menjaga orang yang paling
+          bertahan
+          bersama abg. abel bukan meninggalkan laki-laki yang sedang berproses. abel pergi karena lelah menunggu
+          perhatian yang
+          seharusnya bisa abg berikan, bahkan di tengah semua kesibukan abg. Itu salah abg, dan abg mengakuinya.</p>
+
+        <p>Abang minta maaf sayang. Maaf untuk janji yang tidak ditepati, untuk waktu yang tidak tersisa buat abel,
+          untuk
+          perasaan abel yang sering abg abaikan, dan untuk kata-kata tajam yang pernah abg lontarkan. Abang tidak sedang
+          membela diri. Abang cuma ingin abel tahu bahwa Abang sadar.</p>
+
+        <blockquote>abel pernah bilang, “Dan kuberitahu kepadamu, di sini akan selalu ada seseorang yang terlalu takut
+          kehilanganmu.”</blockquote>
+
+        <p>Ternyata orang itu sampai sekarang masih sama. Abang tidak pernah berhenti menyayangi abel. Kepergian abel
+          tidak
+          membuat perasaan itu hilang. Perasaan itu tetap ada, dan akan terus ada.</p>
+
+        <p>Abang tidak minta abel kembali karena kasihan, dan tidak akan memaksa. Abang cuma ingin kita diberi satu
+          kesempatan untuk memperbaiki semuanya, pelan-pelan dan sama-sama. Abang akan belajar mendengarkan, hadir meski
+          sedang sibuk, jujur soal apa yang Abang rasakan, dan menepati apa yang Abang katakan. Dan kalau ada hal dari
+          abg
+          yang melukai abel, Abang ingin dengar langsung dari abel, supaya kita bisa membenahinya bersama. Kita
+          sama-sama
+          punya kekurangan, dan Abang mau kita tumbuh jadi versi terbaik, bukan untuk membuktikan apa pun, tapi karena
+          kita memang pantas bahagia.</p>
+
+        <p>Kalau suatu hari abel siap, kapan pun itu, pintu Abang masih terbuka. Kalau abel butuh waktu, Abang akan
+          menunggu dengan sabar. Dan kalau pada akhirnya jawaban abel berbeda, Abang akan menghormatinya. Tapi Abang
+          tidak
+          ingin abel pergi tanpa tahu bahwa abel masih sangat berarti.</p>
+
+        <p>Terima kasih sudah pernah bertahan sejauh ini. Terima kasih sudah jadi rumah buat Abang, dan maaf karena
+          Abang belum menjaganya dengan baik.</p>
+
+        <p>Sekarang Abang tidak ingin menghapus kenangan kita sayang. Abang ingin menyambungnya, dengan versi Abang yang
+          lebih baik.🤍</p>
+
+        <p class="ask">Kalau ada satu hal yang ingin Abel sampaikan untuk Abang, Abang siap mendengarkan, apa pun itu.
+        </p>
+
+        <div class="sign">Dimas Lindra</div>
+      </article>
+    </section>
+
+    <section class="gallery">
+      <h2>Kenangan Kita</h2>
+      <p class="sub">Sepuluh potong cerita yang tidak ingin kulupakan.</p>
+      <div class="rail" id="rail"></div>
+      <div class="nav-row">
+        <button class="nav" id="prev" aria-label="Foto sebelumnya">‹</button>
+        <button class="nav" id="next" aria-label="Foto berikutnya">›</button>
+      </div>
+    </section>
+
+    <section class="closing reveal">
+      <span class="heart">♥</span>
+      <p>Dari Abang, untuk Abel, dengan seluruh sayang yang belum selesai.</p>
+    </section>
+  </main>
+
+  <button class="music off" id="musicBtn" aria-label="Putar atau jeda musik" title="Musik"><span>♪</span></button>
+  <audio id="bgm" loop preload="auto"></audio>
+
+  <div id="lightbox" role="dialog" aria-label="Foto diperbesar">
+    <div class="frame"><img id="lbImg" alt="">
+      <div class="cap" id="lbCap"></div>
+    </div>
+  </div>
+
+  <script>
+    /* =====================================================
+       PENGATURAN: GANTI BAGIAN INI SAJA
+       1) MUSIK  : taruh file lagu di folder yang sama, lalu
+                   ubah nama file di bawah.
+       2) FOTO   : taruh 10 foto di folder yang sama (atau di
+                   folder "foto"), lalu ubah nama file & caption.
+       ===================================================== */
+    var MUSIC_FILE = "Budi Doremi - Tak Kan Hilang _ Never Fade (Official Music Video).mp3";
+
+    var PHOTOS = [
+      { src: "foto1.jpeg", caption: "Awal kita" },
+      { src: "foto11.jpeg", caption: "Tawa yang kurindukan" },
+      { src: "foto4.jpeg", caption: "Hari yang manis" },
+      { src: "foto5.jpeg", caption: "Berdua, tanpa beban" },
+      { src: "foto6.jpeg", caption: "Senyummu" },
+      { src: "foto7.jpeg", caption: "Perjalanan kita" },
+      { src: "foto8.jpeg", caption: "Saat semuanya terasa cukup" },
+      { src: "foto9.jpeg", caption: "abel, rumahku" },
+      { src: "foto12.jpeg", caption: "Janji yang ingin kutepati" },
+      { src: "foto13.jpeg", caption: "Semoga masih ada kita" }
+    ];
+    /* ===================================================== */
+
+    /* Kelopak jatuh */
+    (function () {
+      var box = document.getElementById('petals');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      for (var i = 0; i < 22; i++) {
+        var p = document.createElement('div');
+        p.className = 'petal';
+        p.style.left = (Math.random() * 100) + 'vw';
+        p.style.setProperty('--drift', (Math.random() * 160 - 80) + 'px');
+        p.style.animationDuration = (9 + Math.random() * 10) + 's';
+        p.style.animationDelay = (-Math.random() * 18) + 's';
+        p.style.transform = 'scale(' + (0.6 + Math.random() * 0.9) + ')';
+        box.appendChild(p);
+      }
+    })();
+
+    /* Galeri */
+    var rail = document.getElementById('rail');
+    PHOTOS.forEach(function (item, i) {
+      var fig = document.createElement('button');
+      fig.className = 'polaroid';
+      fig.type = 'button';
+      fig.setAttribute('aria-label', 'Perbesar foto: ' + item.caption);
+
+      var ph = document.createElement('div');
+      ph.className = 'ph';
+      var img = new Image();
+      img.alt = item.caption;
+      img.loading = 'lazy';
+      img.onerror = function () {
+        ph.innerHTML = '<div class="empty"><b>♥</b>Foto ' + (i + 1) + '<br>(ganti file ' + item.src + ')</div>';
+        fig.dataset.missing = '1';
+      };
+      img.src = item.src;
+      ph.appendChild(img);
+
+      var cap = document.createElement('div');
+      cap.style.cssText = 'font-family:var(--script);font-size:1.7rem;color:var(--deep);margin-top:12px;line-height:1.1';
+      cap.textContent = item.caption;
+
+      fig.appendChild(ph);
+      fig.appendChild(cap);
+      fig.addEventListener('click', function () {
+        if (fig.dataset.missing) return;
+        document.getElementById('lbImg').src = item.src;
+        document.getElementById('lbImg').alt = item.caption;
+        document.getElementById('lbCap').textContent = item.caption;
+        document.getElementById('lightbox').classList.add('open');
+      });
+      rail.appendChild(fig);
+    });
+
+    function slide(dir) { rail.scrollBy({ left: dir * 330, behavior: 'smooth' }); }
+    document.getElementById('prev').onclick = function () { slide(-1); };
+    document.getElementById('next').onclick = function () { slide(1); };
+
+    var lb = document.getElementById('lightbox');
+    lb.addEventListener('click', function () { lb.classList.remove('open'); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') lb.classList.remove('open'); });
+
+    /* Musik */
+    var bgm = document.getElementById('bgm');
+    var musicBtn = document.getElementById('musicBtn');
+    bgm.src = MUSIC_FILE;
+    bgm.volume = 0.7;
+
+    function setMusicUI(on) {
+      musicBtn.classList.toggle('off', !on);
+      musicBtn.classList.toggle('spin', on);
+    }
+    function playMusic() {
+      var p = bgm.play();
+      if (p && p.then) { p.then(function () { setMusicUI(true); }).catch(function () { setMusicUI(false); }); }
+    }
+    musicBtn.addEventListener('click', function () {
+      if (bgm.paused) { playMusic(); } else { bgm.pause(); setMusicUI(false); }
+    });
+
+    /* Buka surat: ketukan ini memulai musik secara otomatis */
+    document.getElementById('openBtn').addEventListener('click', function () {
+      document.getElementById('cover').classList.add('gone');
+      document.body.classList.remove('locked');
+      playMusic();
+    });
+
+    /* Muncul saat digulir */
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  </script>
+</body>
+
+</html>
